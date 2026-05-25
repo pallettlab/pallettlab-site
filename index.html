@@ -1,1 +1,224 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pallett Lab</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --sage:#c6c8b4;
+      --cream:#f3f0e8;
+      --dark:#1d1d1b;
+      --soft:#6c6b67;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      background:var(--cream);
+      color:var(--dark);
+      font-family:'Inter',sans-serif;
+      line-height:1.6;
+    }
+
+    header{
+      background:var(--sage);
+      padding:28px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-family:'Cormorant Garamond',serif;
+      font-size:54px;
+      font-weight:500;
+      letter-spacing:-1px;
+    }
+
+    nav{
+      display:flex;
+      gap:40px;
+      font-size:13px;
+      letter-spacing:4px;
+      text-transform:uppercase;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--dark);
+    }
+
+    .hero{
+      max-width:1200px;
+      margin:100px auto;
+      padding:0 30px;
+      text-align:center;
+    }
+
+    .label{
+      font-size:12px;
+      letter-spacing:5px;
+      text-transform:uppercase;
+      color:var(--soft);
+      margin-bottom:24px;
+    }
+
+    h1{
+      font-family:'Cormorant Garamond',serif;
+      font-size:64px;
+      font-weight:500;
+      line-height:1.1;
+      max-width:900px;
+      margin:0 auto 30px;
+    }
+
+    .subtitle{
+      font-size:22px;
+      color:var(--soft);
+      margin-bottom:60px;
+      font-family:'Cormorant Garamond',serif;
+    }
+
+    .hero-image{
+      width:100%;
+      max-width:950px;
+      margin:0 auto;
+      overflow:hidden;
+      box-shadow:0 20px 50px rgba(0,0,0,0.12);
+    }
+
+    .hero-image img{
+      width:100%;
+      display:block;
+      filter:grayscale(100%);
+    }
+
+    footer{
+      background:#1b1b1a;
+      color:#ece7db;
+      margin-top:100px;
+      padding:80px 30px;
+      text-align:center;
+    }
+
+    footer h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:32px;
+      margin-bottom:20px;
+      font-weight:500;
+      letter-spacing:3px;
+    }
+
+    footer p{
+      margin:8px 0;
+      color:#d6d0c2;
+    }
+
+    footer a{
+      color:#ece7db;
+      text-decoration:none;
+    }
+
+    @media(max-width:900px){
+
+      header{
+        flex-direction:column;
+        gap:20px;
+        padding:30px;
+      }
+
+      .logo{
+        font-size:42px;
+      }
+
+      h1{
+        font-size:42px;
+      }
+
+      .subtitle{
+        font-size:18px;
+      }
+
+      nav{
+        gap:20px;
+        font-size:11px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    Pallett Lab
+  </div>
+
+  <nav>
+    <a href="#">O studiu</a>
+    <a href="#">Lekce</a>
+    <a href="#">Kontakt</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <div class="label">
+    Dance & Art Laboratory
+  </div>
+
+  <h1>
+    Pallett Lab je vznikající taneční a kreativní koncept z jižní Moravy.
+  </h1>
+
+  <div class="subtitle">
+    Prostor pro pohyb, tvorbu a objevování
+  </div>
+
+  <div class="hero-image">
+    <img
+      src="black-and-white-webovky.jpg"
+      alt="Dance studio"
+    >
+  </div>
+
+</section>
+
+<footer>
+
+  <h2>Kontakt</h2>
+
+  <p>
+    E-mail:
+    <a href="mailto:pallettlab@gmail.com">
+      pallettlab@gmail.com
+    </a>
+  </p>
+
+  <p>
+    Instagram:
+    <a href="https://instagram.com/pallett.lab">
+      @pallett.lab
+    </a>
+  </p>
+
+</footer>
+
+</body>
+</html>
