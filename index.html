@@ -7,253 +7,192 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+
     :root{
-      --sage: #c6c9b6;
-      --cream: #f6f2e8;
-      --ink: #1d1d1b;
-      --soft: #6f6d67;
-      --footer: #171716;
-      --footer-text: #e6dfcf;
+      --sage:#c8cab7;
+      --cream:#f5f1e8;
+      --ink:#1c1c1b;
+      --soft:#6d6b66;
+      --footer:#111111;
+      --footerText:#ebe4d6;
     }
 
     *{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body{
-      min-height: 100%;
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
     body{
-      background: var(--cream);
-      color: var(--ink);
-      font-family: "Inter", system-ui, sans-serif;
-      line-height: 1.6;
-    }
-
-    a{
-      color: inherit;
-      text-decoration: none;
+      background:var(--cream);
+      color:var(--ink);
+      font-family:'Inter',sans-serif;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
     }
 
     .topbar{
-      background: var(--sage);
-      padding: 28px 20px;
-      border-bottom: 1px solid rgba(29, 29, 27, 0.08);
-      text-align: center;
+      background:var(--sage);
+      padding:28px 20px;
+      text-align:center;
     }
 
     .brand{
-      font-size: clamp(2.4rem, 5vw, 4.8rem);
-      font-weight: 400;
-      letter-spacing: -0.04em;
-      line-height: 1;
-    }
-
-    main{
-      padding: 78px 20px 0;
+      font-size:clamp(2.2rem,4vw,3.4rem);
+      font-weight:500;
+      letter-spacing:-0.06em;
     }
 
     .hero{
-      max-width: 1160px;
-      margin: 0 auto;
-      text-align: center;
+      max-width:1200px;
+      margin:0 auto;
+      padding:90px 20px 0;
+      text-align:center;
     }
 
-    .eyebrow{
-      text-transform: uppercase;
-      letter-spacing: 0.48em;
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--soft);
-      margin-bottom: 18px;
+    .label{
+      text-transform:uppercase;
+      letter-spacing:0.45em;
+      font-size:0.75rem;
+      font-weight:600;
+      color:var(--soft);
+      margin-bottom:26px;
     }
 
     h1{
-      font-size: clamp(2.4rem, 4.7vw, 4.9rem);
-      line-height: 1.1;
-      font-weight: 400;
-      letter-spacing: -0.04em;
-      max-width: 14ch;
-      margin: 0 auto;
+      font-size:clamp(2.4rem,4vw,4.4rem);
+      line-height:1.08;
+      font-weight:500;
+      letter-spacing:-0.05em;
+      max-width:11ch;
+      margin:0 auto;
     }
 
     .subtitle{
-      margin: 22px auto 0;
-      font-size: clamp(1.05rem, 1.55vw, 1.2rem);
-      color: var(--soft);
-      max-width: 40ch;
+      margin-top:24px;
+      font-size:1.15rem;
+      color:var(--soft);
+      font-weight:400;
     }
 
     .hero-image{
-      width: min(100%, 820px);
-      margin: 42px auto 0;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.10);
-      background: #fff;
+      width:min(100%,900px);
+      margin:56px auto 0;
+      overflow:hidden;
+      box-shadow:0 25px 60px rgba(0,0,0,0.10);
+      background:white;
     }
 
     .hero-image img{
-      display: block;
-      width: 100%;
-      height: auto;
-      filter: grayscale(100%);
-    }
-
-    .content{
-      max-width: 1100px;
-      margin: 56px auto 0;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 20px;
-      align-items: stretch;
-    }
-
-    .panel{
-      border: 1px solid rgba(29, 29, 27, 0.10);
-      border-radius: 22px;
-      padding: 28px;
-      background: rgba(255, 255, 255, 0.28);
-      backdrop-filter: blur(2px);
-    }
-
-    .panel h2{
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.38em;
-      color: var(--soft);
-      margin-bottom: 18px;
-      font-weight: 600;
-    }
-
-    .panel p{
-      font-size: 1rem;
-      line-height: 1.8;
-      color: rgba(29, 29, 27, 0.84);
-    }
-
-    .contact{
-      background: var(--footer);
-      color: var(--footer-text);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact::after{
-      content: "";
-      position: absolute;
-      right: -30px;
-      bottom: -10px;
-      width: 180px;
-      height: 180px;
-      border: 1px solid rgba(230, 223, 207, 0.40);
-      border-radius: 50%;
-      opacity: 0.7;
-      pointer-events: none;
-    }
-
-    .contact h2{
-      color: rgba(230, 223, 207, 0.85);
-    }
-
-    .contact .item{
-      margin-bottom: 10px;
-      font-size: 0.98rem;
-    }
-
-    .contact a{
-      color: var(--footer-text);
-      border-bottom: 1px solid rgba(230, 223, 207, 0.35);
-      padding-bottom: 1px;
+      width:100%;
+      display:block;
+      filter:grayscale(100%);
     }
 
     footer{
-      background: var(--footer);
-      color: rgba(230, 223, 207, 0.78);
-      text-align: center;
-      padding: 34px 20px 38px;
-      margin-top: 56px;
-      font-size: 0.9rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      margin-top:90px;
+      background:var(--footer);
+      color:var(--footerText);
+      text-align:center;
+      padding:80px 20px;
     }
 
-    @media (max-width: 900px){
-      main{
-        padding-top: 52px;
-      }
-
-      .content{
-        grid-template-columns: 1fr;
-      }
-
-      .hero-image{
-        width: 100%;
-      }
+    .contact-item{
+      margin:14px 0;
+      font-size:1.15rem;
+      font-weight:300;
     }
 
-    @media (max-width: 640px){
+    .contact-item a{
+      color:var(--footerText);
+      text-decoration:none;
+      border-bottom:1px solid rgba(235,228,214,0.35);
+      padding-bottom:2px;
+    }
+
+    @media(max-width:768px){
+
       .topbar{
-        padding: 24px 16px;
+        padding:24px 16px;
       }
 
-      main{
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-
-      .panel{
-        padding: 22px;
+      .hero{
+        padding-top:64px;
       }
 
       h1{
-        max-width: 12ch;
+        max-width:12ch;
       }
+
+      .subtitle{
+        font-size:1rem;
+      }
+
+      footer{
+        padding:60px 20px;
+      }
+
+      .contact-item{
+        font-size:1rem;
+      }
+
     }
+
   </style>
 </head>
+
 <body>
+
   <header class="topbar">
-    <div class="brand">Pallett Lab</div>
+    <div class="brand">
+      Pallett Lab
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="eyebrow">Dance &amp; Art Laboratory</div>
-      <h1>Pallett Lab je vznikající taneční a kreativní koncept z jižní Moravy.</h1>
-      <div class="subtitle">Prostor pro pohyb, tvorbu a objevování</div>
+  <main class="hero">
 
-      <div class="hero-image">
-        <img src="black-and-white-webovky.jpg" alt="Tanečnice v pohybové pozici ve studiu">
-      </div>
-    </section>
+    <div class="label">
+      Dance & Art Laboratory
+    </div>
 
-    <section class="content">
-      <article class="panel">
-        <h2>O studiu</h2>
-        <p>
-          Pallett Lab je jemný, současný koncept propojující tanec, umění a vizuální identitu.
-          Důraz je na čistotu, klid, atmosféru a výraznou fotku, která celý web nese.
-        </p>
-      </article>
+    <h1>
+      Pallett Lab je vznikající taneční a kreativní koncept z jižní Moravy.
+    </h1>
 
-      <aside class="panel contact">
-        <h2>Kontakt</h2>
-        <div class="item">E-mail: <a href="mailto:pallettlab@gmail.com">pallettlab@gmail.com</a></div>
-        <div class="item">IG: <a href="https://instagram.com/pallett.lab" target="_blank" rel="noreferrer">@pallett.lab</a></div>
-        <div class="item">Jižní Morava</div>
-      </aside>
-    </section>
+    <div class="subtitle">
+      Prostor pro pohyb, tvorbu a objevování
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="black-and-white-webovky.jpg"
+        alt="Pallett Lab dance studio"
+      >
+    </div>
+
   </main>
 
   <footer>
-    Pallett Lab
+
+    <div class="contact-item">
+      E-mail:
+      <a href="mailto:pallettlab@gmail.com">
+        pallettlab@gmail.com
+      </a>
+    </div>
+
+    <div class="contact-item">
+      IG:
+      <a href="https://instagram.com/pallett.lab" target="_blank">
+        @pallett.lab
+      </a>
+    </div>
+
   </footer>
+
 </body>
 </html>
