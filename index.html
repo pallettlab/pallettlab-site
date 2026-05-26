@@ -11,8 +11,8 @@
 
   <style>
     :root {
-      --sage: #c7c9b6;
-      --cream: #f6f2e8;
+      --sage-bg: #d5d8c5;
+      --sage-top: #a4a98d;
       --ink: #1e1e1c;
       --soft: #6f6d67;
       --footer: #171716;
@@ -31,7 +31,10 @@
     }
 
     body {
-      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--sage-bg);
       color: var(--ink);
       font-family: "Inter", system-ui, sans-serif;
       line-height: 1.6;
@@ -44,23 +47,24 @@
       text-decoration: none;
     }
 
-   .topbar {
-      background: var(--sage);
+    .topbar {
+      background: var(--sage-top);
       border-bottom: 1px solid var(--line);
-      padding: 20px 20px;
+      padding: 24px 20px 22px;
       text-align: center;
     }
 
     .brand {
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
       font-weight: 400;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
       line-height: 1;
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     main {
+      flex: 1;
       padding: 72px 20px 0;
     }
 
@@ -149,11 +153,11 @@
 
     @media (max-width: 768px) {
       .topbar {
-        padding: 22px 16px;
+        padding: 22px 16px 20px;
       }
 
       .brand {
-        font-size: clamp(1.9rem, 7vw, 2.8rem);
+        font-size: clamp(2rem, 7vw, 3rem);
       }
 
       .hero {
